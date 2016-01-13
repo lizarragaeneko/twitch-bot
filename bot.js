@@ -21,14 +21,14 @@ https://node-irc.readthedocs.org/en/latest/API.html#client
 */
 
 var settings = {
-  channels: ["#channel1","#channel2","#channel3","#channel4"], //channels you want the bot to join
+  channels: ["#channel","#channel2","#channel3","#channel4"], //channels you want the bot to join
   // channels: ["#iamredseal"],
-  server: "{botname}.jtvirc.com",
-  botName: "{actual bot account name}",
+  server: "irc.twitch.tv",
+  botName: "<BOT USERNAME>",
   botNick: ["bot"], //i use these to trigger random messages from the bot
-  password: "{password}",
+  password: "<OAUTH TOKEN>", // can be obtained here: http://www.twitchapps.com/tmi
   admins: ['adminName1', 'adminName2'], //admins that can control the bot
-  swears: ['badword1','badword2','badwords'], //use this as a profanity filter 
+  swears: ['badword1','badword2','badwords'], //use this as a profanity filter
   quotes: [
       "Did someone say my name?",
       "You've enjoyed all the power you've been given, haven't you? I wonder how you'd take to working in a pocket calculator.",
@@ -243,7 +243,7 @@ bot.addListener("message", function (from, to, text, message) {
 //Handle on connect event
 bot.addListener("connect", function () {
   console.log("*** Bot Connected ***");
-  //bot.say(config.channels[0], "I am Here Bitches!");
+  bot.say(settings.channels[0], "I am Here Bitches!");
   for(var i = 0; i < settings.channels.length; i++){
     clearInterval(settings[settings.channels[i].substr(1)].adminMsg);
     settings[settings.channels[i].substr(1)].adminMsg = false;
