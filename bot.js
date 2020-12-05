@@ -21,13 +21,13 @@ https://node-irc.readthedocs.org/en/latest/API.html#client
 */
 
 var settings = {
-  channels: ["#channel","#channel2","#channel3","#channel4"], //channels you want the bot to join
+  channels: ["#tripaloskiesp","#channel2","#channel3","#channel4"], //channels you want the bot to join
   // channels: ["#iamredseal"],
   server: "irc.twitch.tv",
-  botName: "<BOT USERNAME>",
+  botName: "enekohacker",
   botNick: ["bot"], //i use these to trigger random messages from the bot
-  password: "<OAUTH TOKEN>", // can be obtained here: http://www.twitchapps.com/tmi
-  admins: ['adminName1', 'adminName2'], //admins that can control the bot
+  password: "oauth:bej974iauu676i8w5u3yg58d63kwnu", // can be obtained here: http://www.twitchapps.com/tmi
+  admins: ['enekohacker', 'tripaloskiesp'], //admins that can control the bot
   swears: ['badword1','badword2','badwords'], //use this as a profanity filter
   quotes: [
       "Did someone say my name?",
