@@ -203,8 +203,8 @@ bot.addListener("join", function(channel, who) {
 // Listen for any message, say to him/her in the room
 bot.addListener("message", function (from, to, text, message) {
   //console.log(arguments);
-  if(text === "cookie"){
-    bot.say(to, "Great! You jump off bridges when bots tell you to as well?");
+  if(text === "cerveza"){
+    bot.say(to, "¡Venga Mis Amores, a beber cerveza que alguien os lo ha ordenado!");
     return;
   }
   // else if(text.match('recruiting')){
